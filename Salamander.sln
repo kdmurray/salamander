@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{7A81EC7C-C8FA-4922-AAA2-216769837098}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{C3FD0E59-8E72-4609-BADA-9F09FB341650}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{B6FE3E55-DA68-4CEC-BF41-AA03EE2D4E05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{F008F760-BB2F-4415-87F4-43EB2C896C1B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Importer", "Importer\Importer.csproj", "{4DE3108C-5D9C-4E02-979C-B3C35C8DB32D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{4BA91A47-683E-46CC-A9B0-9CD2F27A431A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BA91A47-683E-46CC-A9B0-9CD2F27A431A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4BA91A47-683E-46CC-A9B0-9CD2F27A431A}.Debug|x86.Build.0 = Debug|Any CPU
+		{4BA91A47-683E-46CC-A9B0-9CD2F27A431A}.Release|x86.ActiveCfg = Release|Any CPU
+		{4BA91A47-683E-46CC-A9B0-9CD2F27A431A}.Release|x86.Build.0 = Release|Any CPU
+		{4DE3108C-5D9C-4E02-979C-B3C35C8DB32D}.Debug|x86.ActiveCfg = Debug|x86
+		{4DE3108C-5D9C-4E02-979C-B3C35C8DB32D}.Debug|x86.Build.0 = Debug|x86
+		{4DE3108C-5D9C-4E02-979C-B3C35C8DB32D}.Release|x86.ActiveCfg = Release|x86
+		{4DE3108C-5D9C-4E02-979C-B3C35C8DB32D}.Release|x86.Build.0 = Release|x86
+		{B6FE3E55-DA68-4CEC-BF41-AA03EE2D4E05}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B6FE3E55-DA68-4CEC-BF41-AA03EE2D4E05}.Debug|x86.Build.0 = Debug|Any CPU
+		{B6FE3E55-DA68-4CEC-BF41-AA03EE2D4E05}.Release|x86.ActiveCfg = Release|Any CPU
+		{B6FE3E55-DA68-4CEC-BF41-AA03EE2D4E05}.Release|x86.Build.0 = Release|Any CPU
+		{F008F760-BB2F-4415-87F4-43EB2C896C1B}.Debug|x86.ActiveCfg = Debug|x86
+		{F008F760-BB2F-4415-87F4-43EB2C896C1B}.Debug|x86.Build.0 = Debug|x86
+		{F008F760-BB2F-4415-87F4-43EB2C896C1B}.Release|x86.ActiveCfg = Release|x86
+		{F008F760-BB2F-4415-87F4-43EB2C896C1B}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Engine\Engine.csproj
+	EndGlobalSection
+EndGlobal
