@@ -7,8 +7,10 @@ namespace Salamander.Core
 		public string Title { get; set; }
 		public string Slug { get; set; }
 
-		public Tag ()
+		public Tag (string title, string slug)
 		{
+			Title = title;
+			Slug = slug;
 		}
 	}
 }

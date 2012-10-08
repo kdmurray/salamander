@@ -33,12 +33,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Site.cs" />
     <Compile Include="Post.cs" />
     <Compile Include="Page.cs" />
-    <Compile Include="Content.cs" />
     <Compile Include="Tag.cs" />
     <Compile Include="Category.cs" />
+    <Compile Include="SiteInfo.cs" />
+    <Compile Include="Arguments.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

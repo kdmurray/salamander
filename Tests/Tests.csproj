@@ -30,9 +30,38 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="nunit.framework">
+      <HintPath>lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.mocks">
+      <HintPath>lib\nunit.mocks.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="DomainObjectTests.cs" />
+    <Compile Include="ArgumentProcessorTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="lib\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\nunit.framework.dll" />
+    <None Include="lib\nunit.mocks.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{B6FE3E55-DA68-4CEC-BF41-AA03EE2D4E05}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Engine\Engine.csproj">
+      <Project>{F008F760-BB2F-4415-87F4-43EB2C896C1B}</Project>
+      <Name>Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Importer\Importer.csproj">
+      <Project>{4DE3108C-5D9C-4E02-979C-B3C35C8DB32D}</Project>
+      <Name>Importer</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

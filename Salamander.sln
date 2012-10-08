@@ -1,10 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{7A81EC7C-C8FA-4922-AAA2-216769837098}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{C3FD0E59-8E72-4609-BADA-9F09FB341650}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{B6FE3E55-DA68-4CEC-BF41-AA03EE2D4E05}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{F008F760-BB2F-4415-87F4-43EB2C896C1B}"
@@ -35,8 +31,6 @@ Global
 		{F008F760-BB2F-4415-87F4-43EB2C896C1B}.Debug|x86.Build.0 = Debug|x86
 		{F008F760-BB2F-4415-87F4-43EB2C896C1B}.Release|x86.ActiveCfg = Release|x86
 		{F008F760-BB2F-4415-87F4-43EB2C896C1B}.Release|x86.Build.0 = Release|x86
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Engine\Engine.csproj
