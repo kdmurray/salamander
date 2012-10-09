@@ -39,6 +39,7 @@
     <Compile Include="Category.cs" />
     <Compile Include="SiteInfo.cs" />
     <Compile Include="Arguments.cs" />
+    <Compile Include="Utility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

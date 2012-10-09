@@ -8,7 +8,10 @@ namespace Salamander.Importer
 	{
 		public static void Main (string[] args)
 		{
-			Arguments cliArgs = new Arguments(args);
+			Arguments arguments = new Arguments(args);
+			ImportEngine engine = new ImportEngine(arguments);
+
+
 		}
 	}
 }

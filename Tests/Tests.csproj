@@ -41,6 +41,7 @@
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="DomainObjectTests.cs" />
     <Compile Include="ArgumentProcessorTests.cs" />
+    <Compile Include="ImportEngineTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
