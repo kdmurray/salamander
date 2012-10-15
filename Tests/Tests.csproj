@@ -36,9 +36,9 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Compile Include="ImportEngineTests.cs" />
     <Compile Include="DomainObjectTests.cs" />
     <Compile Include="ArgumentProcessorTests.cs" />
+    <Compile Include="ImportEngineTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">

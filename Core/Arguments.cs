@@ -8,7 +8,6 @@ namespace Salamander.Core
 	public class Arguments
 	{
 		StringDictionary Parameters;
-		Hashtable pa;
 
 		public Arguments (string[] args)
 		{
