@@ -1,12 +1,37 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Importer/Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Importer/ImportEngine.cs">
     <Files>
-      <File FileName="Importer/Main.cs" Line="14" Column="4" />
+      <File FileName="Importer/Main.cs" Line="12" Column="1" />
+      <File FileName="Importer/ImportEngine.cs" Line="213" Column="1" />
+      <File FileName="Core/Arguments.cs" Line="23" Column="1" />
+      <File FileName="Core/Utility.cs" Line="8" Column="25" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Core" expanded="True" />
+          <Node name="Importer" expanded="True" selected="True" />
+          <Node name="Tests" expanded="True" />
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.NUnit.TestPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/kdmurray/Code/salamander/Importer/Main.cs" line="16" />
+      <Breakpoint file="/Users/kdmurray/Code/salamander/Importer/Main.cs" line="14" />
+      <Breakpoint file="/Users/kdmurray/Code/salamander/Importer/ImportEngine.cs" line="34" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

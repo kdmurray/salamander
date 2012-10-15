@@ -27,7 +27,8 @@ namespace Salamander.Core
 			string key = "";
 			string value = "";
 
-			if (arg.Contains ("=")) {
+			if (arg.Contains ("=")) 
+			{
 				int splitPosition = arg.IndexOf ("=");
 
 				key = arg.Substring (0, splitPosition);

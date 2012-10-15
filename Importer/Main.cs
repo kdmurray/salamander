@@ -11,6 +11,9 @@ namespace Salamander.Importer
 			Arguments arguments = new Arguments(args);
 			ImportEngine engine = new ImportEngine(arguments);
 
+			engine.CreateDirectoryStructure ();
+
+			engine.ProcessInputFiles ();
 
 		}
 	}

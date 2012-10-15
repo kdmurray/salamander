@@ -5,9 +5,9 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.0</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{4BA91A47-683E-46CC-A9B0-9CD2F27A431A}</ProjectGuid>
+    <ProjectGuid>{BA55E67D-AAF9-46E1-8B32-56B2A1929D28}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>Salamander.Tests</RootNamespace>
+    <RootNamespace>Tests</RootNamespace>
     <AssemblyName>Tests</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,25 +31,14 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="nunit.framework">
-      <HintPath>lib\nunit.framework.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="nunit.mocks">
-      <HintPath>lib\nunit.mocks.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="DomainObjectTests.cs" />
-    <Compile Include="ArgumentProcessorTests.cs" />
-    <Compile Include="ImportEngineTests.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
-    <Folder Include="lib\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="lib\nunit.framework.dll" />
-    <None Include="lib\nunit.mocks.dll" />
+    <Compile Include="ImportEngineTests.cs" />
+    <Compile Include="DomainObjectTests.cs" />
+    <Compile Include="ArgumentProcessorTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj">
