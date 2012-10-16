@@ -14,7 +14,6 @@ namespace Salamander.Importer
 		public string authorName { get; set; }
 		public string inputExtension { get; set; }
 		public string outputExtension { get; set; }
-		public bool   normalizeTags { get; set; }
 
 		private List<string> errors;
 
@@ -26,12 +25,12 @@ namespace Salamander.Importer
 			authorName = "";
 			inputExtension = ".markdown";
 			outputExtension = ".md";
-			normalizeTags = false;
 			errors = new List<string> ();
 
 			ReadArguments (args);
 
-			if (!ValidateInputData ()) {
+			if (!ValidateInputData ())
+			{
 				Utility.DisplayErrors (errors);
 				return;
 			}
@@ -40,7 +39,7 @@ namespace Salamander.Importer
 
 		public void ProcessInputFiles ()
 		{
-			string[] fileList = Directory.GetFiles (inputDirectory, inputExtension);
+			string[] fileList = Directory.GetFiles (inputDirectory, "*" + inputExtension);
 
 			foreach (string file in fileList)
 			{
@@ -78,6 +77,7 @@ namespace Salamander.Importer
 				StreamReader sr = new StreamReader(sourceFilePath);
 				return sr.BaseStream;
 			}
+
 			return Stream.Null;
 		}
 
@@ -87,28 +87,29 @@ namespace Salamander.Importer
 			bool inHeader = false;
 			bool inCategories = false;
 			bool inTags = false;
-			StringBuilder sb = new StringBuilder(); 
-			StringBuilder tagList = new StringBuilder();
-			StringBuilder catList = new StringBuilder();
+			StringBuilder sb = new StringBuilder (); 
+			StringBuilder tagList = new StringBuilder ();
+			StringBuilder catList = new StringBuilder ();
 
-			while (!reader.EndOfStream) 
+			while (!reader.EndOfStream)
 			{
-				string line = reader.ReadLine ().Trim ();
+				string line = reader.ReadLine ();
 
-				if (line == "---")
+				if (line == "---") 
 				{
 					inHeader = !inHeader;
-					if (!inHeader)
+
+					if (!inHeader) 
 					{
-						if (inTags)
+						if (inTags) 
 						{
 							inTags = false;
 							sb.Append ("tags: ");
 							sb.Append (tagList.ToString ());
 							sb.Append (System.Environment.NewLine);
-						}
+						} 
 
-						if (inCategories)
+						if (inCategories) 
 						{
 							inCategories = false;
 							sb.Append ("categories: ");
@@ -118,51 +119,41 @@ namespace Salamander.Importer
 					}
 				}
 
-				if (inHeader)
+				if (inHeader) 
 				{
 					string[] pieces = new string[] { "", "" };
 					int splitPos = 0;
 
-					if (line.Contains (":"))
-					{
+					if (line.Contains (":")) {
 						splitPos = line.IndexOf (":");
-						pieces[0] = line.Substring (0,splitPos).Trim ();
-						pieces[1] = line.Substring (splitPos + 1).Trim ();
-					}
-					else
-					{
-						pieces[0] = line;
+						pieces [0] = line.Substring (0, splitPos).Trim ();
+						pieces [1] = line.Substring (splitPos + 1).Trim ();
+					} else {
+						pieces [0] = line;
 					}
 
-					if (pieces[0].Trim () == "date")
-					{
+					if (pieces [0].Trim () == "date") {
 						sb.Append ("updated: ");
-						sb.Append (pieces[1]);
+						sb.Append (pieces [1]);
 						sb.Append (System.Environment.NewLine);
 						sb.Append ("published: ");
-						sb.Append (pieces[1]);
+						sb.Append (pieces [1]);
 						sb.Append (System.Environment.NewLine);
 					}
 
-					if (pieces[0].Trim () == "slug" ||
-					    pieces[0].Trim () == "title" )
-					{
+					if (pieces [0].Trim () == "slug" ||
+						pieces [0].Trim () == "title") {
 						sb.Append (line);
 						sb.Append (System.Environment.NewLine);
 					}
 
-					if (inTags)
-					{
-						if (pieces[0].Trim ().StartsWith ("- "))
-						{
-							if (tagList.Length > 0)
-							{
+					if (inTags) {
+						if (pieces [0].Trim ().StartsWith ("- ")) {
+							if (tagList.Length > 0) {
 								tagList.Append (",");
 							}
-							tagList.Append (pieces[0].Substring (1).Trim ());
-						}
-						else
-						{
+							tagList.Append (pieces [0].Substring (1).Trim ());
+						} else {
 							inTags = false;
 							sb.Append ("tags: ");
 							sb.Append (tagList.ToString ());
@@ -170,23 +161,17 @@ namespace Salamander.Importer
 						}
 					}
 
-					if (pieces[0].Trim() == "tags")
-					{
+					if (pieces [0].Trim () == "tags") {
 						inTags = true;
 					}					
 
-					if (inCategories)
-					{
-						if (pieces[0].Trim ().StartsWith ("- "))
-						{
-							if (catList.Length > 0)
-							{
+					if (inCategories) {
+						if (pieces [0].Trim ().StartsWith ("- ")) {
+							if (catList.Length > 0) {
 								catList.Append (",");
 							}
-							catList.Append (pieces[0].Substring (1).Trim ());
-						}
-						else
-						{
+							catList.Append (pieces [0].Substring (1).Trim ());
+						} else {
 							inCategories = false;
 							sb.Append ("categories: ");
 							sb.Append (catList.ToString ());
@@ -194,11 +179,17 @@ namespace Salamander.Importer
 						}
 					}
 
-					if (pieces[0].Trim () == "categories")
-					{
+					if (pieces [0].Trim () == "categories") {
 						inCategories = true;
 					}
 
+				}
+
+				if (!inHeader &&
+					!inTags &&
+					!inCategories &&
+					line != "---") {
+					sb.AppendLine (line);
 				}
 			}
 
@@ -252,14 +243,6 @@ namespace Salamander.Importer
 			
 			if (arguments.ContainsKey ("-a")) {
 				authorName = arguments["-a"];
-			}
-			
-			if (arguments.ContainsKey ("--normalizetags")) {
-				normalizeTags = true;
-			}
-			
-			if (arguments.ContainsKey ("-n")) {
-				normalizeTags = true;
 			}
 		}
 

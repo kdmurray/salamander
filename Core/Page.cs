@@ -6,7 +6,8 @@ namespace Salamander.Core
 	{
 		public string Title { get; set; }
 		public string Author { get; set; }
-		public string Body { get; set; }
+		public string BodyMarkdown { get; set; }
+		public string BodyHtml { get; set; }
 		public string Slug { get; set; }
 		public DateTime Published { get; set; }
 		public DateTime Updated { get; set; }
@@ -34,7 +35,11 @@ namespace Salamander.Core
 				isValid = false;
 			}
 			
-			if (Body == "" || null == Body) {
+			if (BodyMarkdown == "" || null == BodyMarkdown) {
+				isValid = false;
+			}
+			
+			if (BodyHtml == "" || null == BodyHtml) {
 				isValid = false;
 			}
 			

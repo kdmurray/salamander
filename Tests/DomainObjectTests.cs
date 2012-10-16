@@ -50,7 +50,8 @@ namespace Salamander.Tests
 		{
 			Page p = new Page();
 			p.Author = "kdmurray";
-			p.Body = "<b>Title</b> <br/> This is some text.";
+			p.BodyMarkdown = "**Title** <br/> This is some text.";
+			p.BodyHtml = "<b>Title</b> <br/> This is some text.";
 			p.Published = DateTime.Now;
 			p.Slug = "this-is-the-title";
 			p.Title = "This is the Title";

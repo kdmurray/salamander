@@ -1,37 +1,42 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Importer/ImportEngine.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Core/Utility.cs">
     <Files>
-      <File FileName="Importer/Main.cs" Line="12" Column="1" />
-      <File FileName="Importer/ImportEngine.cs" Line="213" Column="1" />
-      <File FileName="Core/Arguments.cs" Line="23" Column="1" />
-      <File FileName="Core/Utility.cs" Line="8" Column="25" />
+      <File FileName="Engine/Main.cs" Line="26" Column="1" />
+      <File FileName="../broiledblog/BroiledBlog/Main.cs" Line="52" Column="1" />
+      <File FileName="Engine/Generator.cs" Line="41" Column="35" />
+      <File FileName="../broiledblog/BroiledBlog/Engine.cs" Line="67" Column="4" />
+      <File FileName="Core/Post.cs" Line="65" Column="5" />
+      <File FileName="Core/Utility.cs" Line="70" Column="12" />
+      <File FileName="../broiledblog/BroiledBlog/FileSystemManager.cs" Line="180" Column="1" />
+      <File FileName="../broiledblog/BroiledBlog.Core/Util.cs" Line="214" Column="1" />
+      <File FileName="Engine/FileWriter.cs" Line="16" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
-          <Node name="Core" expanded="True" />
-          <Node name="Importer" expanded="True" selected="True" />
-          <Node name="Tests" expanded="True" />
+          <Node name="BroiledBlog" expanded="True" />
+          <Node name="BroiledBlog.Core" expanded="True" />
         </State>
       </Pad>
       <Pad Id="ClassPad">
         <State expanded="True" selected="True" />
       </Pad>
       <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
+        <State>
+          <Value>line</Value>
+        </State>
       </Pad>
       <Pad Id="MonoDevelop.NUnit.TestPad">
         <State expanded="True" selected="True" />
       </Pad>
+      <Pad Id="ConnectionManagerPad">
+        <State selected="True" />
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/kdmurray/Code/salamander/Importer/Main.cs" line="16" />
-      <Breakpoint file="/Users/kdmurray/Code/salamander/Importer/Main.cs" line="14" />
-      <Breakpoint file="/Users/kdmurray/Code/salamander/Importer/ImportEngine.cs" line="34" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
