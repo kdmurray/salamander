@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="salamander/Program.cs">
+    <Files>
+      <File FileName="salamander/Post.cs" Line="1" Column="1" />
+      <File FileName="salamander/Program.cs" Line="29" Column="4" />
+      <File FileName="salamander/FileManager.cs" Line="77" Column="7" />
+      <File FileName="salamander/Utility.cs" Line="1" Column="1" />
+      <File FileName="../__salamander/Engine/Generator.cs" Line="1" Column="1" />
+      <File FileName="salamander/salamander.config" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

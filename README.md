@@ -1,4 +1,3 @@
-salamander
-==========
+##salamander
 
-Static blog / website generator written in C#.
+Salamander is a static blog / website generator written in C#.

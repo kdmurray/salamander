@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "salamander", "salamander\salamander.csproj", "{A98ED933-EA51-4955-9FB6-DA7C2B6EAB51}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{04661207-79EA-40BA-8E7B-FA47B66A6F16}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		SamplePost.md = SamplePost.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +19,8 @@ Global
 		{A98ED933-EA51-4955-9FB6-DA7C2B6EAB51}.Debug|x86.Build.0 = Debug|x86
 		{A98ED933-EA51-4955-9FB6-DA7C2B6EAB51}.Release|x86.ActiveCfg = Release|x86
 		{A98ED933-EA51-4955-9FB6-DA7C2B6EAB51}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = salamander\salamander.csproj
